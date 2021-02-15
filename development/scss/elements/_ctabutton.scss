@@ -1,7 +1,7 @@
 .cta_main{
   display: flex;
   justify-content: center;
-  background-color: $header-color ;
+  background-color: $nav-color ;
 }
 
 .cta_container {
@@ -30,7 +30,7 @@
 }
 .cta_button2 {
   background-color: $buttons-color;
-  border: 1px solid $header-color;
+  border: 1px solid $nav-color;
   color: $background-color;
   width: 150px;
   height: 40px;
