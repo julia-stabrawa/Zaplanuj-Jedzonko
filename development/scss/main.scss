@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-@import "generic/reset";
-@import "settings/colors";
-@import "settings/fonts";
-// Sass:
-// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "generic/all";
+@import "settings/all";
+@import "elements/all";
 
 
 body{
