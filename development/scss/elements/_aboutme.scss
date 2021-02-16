@@ -1,0 +1,17 @@
+.author {
+  padding: 100px 0;
+  background-color: #CFD3D6;
+  color: #222;
+}
+
+.author__container {
+  padding: 0 100px;
+  background-color: var(--color-white);
+  border: 1px solid #E8E9ED;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 37px;
+  border-radius: 5px;
+}
+
