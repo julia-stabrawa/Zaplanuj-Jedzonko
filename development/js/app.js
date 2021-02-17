@@ -36,6 +36,27 @@ window.onload = () => {
 }
 
 
+//przejscia w app
+
+const deskButtonPlan = document.querySelector("#desk__buttonplan");
+const plan = document.querySelector("#dodaj-plan");
+
+deskButtonPlan.addEventListener("click", (e) =>{
+    dodaj.classList.add("dodaj")
+    plan.classList.remove("dodaj-plan")
+})
+
+const deskButtonRecipes =document.querySelector("#desk__buttonrecipe");
+const recipe = document.querySelector("#dodaj-przepis");;
+
+deskButtonRecipes.addEventListener("click", (e) => {
+    dodaj.classList.add("dodaj")
+    recipe.classList.remove("dodaj-przepis")
+})
+
+
+
+
 // 3.2 Pulpit - widget powiadomienia
 
 const schowajto1 = document.querySelector(".desk-check-test1");
