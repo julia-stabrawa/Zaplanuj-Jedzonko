@@ -5,7 +5,14 @@ const btnName = document.querySelector("#btn__name");
 const userName = document.querySelector(".user__name");
 const firstPage = document.querySelector(".first__entry");
 const mainDesk = document.querySelector(".desk__main");
-const dodaj =document.querySelector("#dodaj");
+
+function saveNameToLocalStorage() {
+    const user = givenName.value;
+    localStorage.setItem("name", user);
+    userName.innerHTML = localStorage.getItem("name");
+    firstPage.classList.add("hide");
+    mainDesk.classList.add("show");
+}
 
 btnName.addEventListener("click", e => {
     e.preventDefault()
@@ -13,17 +20,22 @@ btnName.addEventListener("click", e => {
         alert("Musisz wpisać jakieś imię");
     } else {
         saveNameToLocalStorage();
-        firstPage.classList.add("hide");
-       /* mainDesk.classList.add("show");*/
-        dodaj.classList.remove("dodaj")
     }
+    console.log(localStorage.getItem("name"));
 });
 
-function saveNameToLocalStorage() {
-    const user = givenName.value;
-    localStorage.setItem("name", user);
-    userName.innerHTML = localStorage.getItem("name");
+
+window.onload = () => {
+    if (localStorage.getItem("name") !== "null") {
+        userName.innerHTML = localStorage.getItem("name");
+        firstPage.classList.add("hide");
+        mainDesk.classList.add("show");
+    } else {
+        saveNameToLocalStorage();
+    }
 }
+
+
 //przejscia w app
 
 const deskButtonPlan = document.querySelector("#desk__buttonplan");
