@@ -47,23 +47,314 @@
                     <h3>wygląda na to że jesteś tutaj pierwszy raz!</h3>
                     <form class="entry__form">
                         <div class="form__row">
-                            <input id="name" name="name" type="text" placeholder="tutaj wpisz jak masz na imię" class="entry__form-input">
+                            <input id="name" name="name" type="text" placeholder="tutaj wpisz jak masz na imię"
+                                   class="entry__form-input">
                             <button href="#" id="btn__name">Gotowe!</button>
                         </div>
                     </form>
                     <p>Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)</p>
                 </div>
             </div>
+            <div class="dodaj-przepis" id="dodaj-przepis">
+                <div class="recipe">
+                    <div class="recipe-all">
+                        <div class="recipe-top">
+                            <div class="recipe-title">NOWY PRZEPIS</div>
+                            <button class="recipe-exit">Zapisz i zamknij</button>
+                        </div>
+                        <hr>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Nazwa przepisu</h1>
+                            <input class="recipe-input-one" type="text" name="nazwa"
+                                   value="">
+                        </div>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Opis przepisu</h1>
+                            <textarea class="recipe-input-two" rows="4" column="90" type="text" name="nazwa"></textarea>
+                        </div>
+                        <div id="recipe-minititle2-all">
+                            <div class="recipe-minititle2">
+                                <p class="recipe-p1">INSTRUKCJE</p>
+                                <hr>
+                                <p><input class="recipe-input-three" type="text" name="nazwa" value="" size="12">
+                                    <button class="button">+</button>
+                                <div id="instr-add" class="scroll"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati provident quos vitae. A alias architecto consectetur corporis cum dignissimos, dolor dolorem dolores earum eius esse eum eveniet ex explicabo fugiat fugit impedit incidunt ipsa itaque iure iusto laborum minima nam natus non nulla numquam pariatur quas quidem quo recusandae repellendus sapiente sed suscipit tenetur totam vel? Animi asperiores autem cumque, dolorem exercitationem incidunt, magni officiis quidem similique sit tenetur veritatis, vitae voluptates. Exercitationem explicabo ipsum omnis quas qui temporibus unde ut. Assumenda debitis delectus eaque enim id, ipsa natus obcaecati omnis optio pariatur quaerat quasi quia, rerum sunt vitae? Nobis?<i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                                </p>
+                            </div>
+                            <div class="recipe-minititle3 ">
+                                <p class="recipe-p1">SKŁADNIKI</p>
+                                <hr>
+                                <p><input class="recipe-input-for" type="text" name="nazwa" value="" size="12">
+                                    <button class="button">+</button>
+                                <div id="instr2-add" class="scroll"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquam aliquid aperiam, atque distinctio eligendi eos facilis fugit ipsa iste magni maxime modi molestiae natus necessitatibus nemo odio praesentium provident quos, recusandae rem rerum sequi similique tenetur totam ullam, velit veniam veritatis voluptate? Aliquid assumenda atque blanditiis consequatur cumque dolores explicabo fuga, illo in ipsam labore natus omnis placeat possimus praesentium quidem quos repellat sequi suscipit temporibus totam voluptas.
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-            <div class="dodaj">
+            <div class="dodaj-plan" id="dodaj-plan">
+                <div class="schedules">
+                    <div class="schedules-all">
+                        <div class="schedules-top">
+                            <div class="schedules-title">NOWY PLAN</div>
+                            <button class="schedules-exit">Zapisz i zamknij</button>
+                        </div>
+                        <hr>
+                        <div class="schedules-minititle">
+                            <h1 class="schedules-h1">Nazwa planu</h1>
+                            <input class="schedules-input-one" type="text" name="nazwa"
+                                   value="Plan jarski na bezmięsny tydzień">
+                        </div>
+
+                        <div class="schedules-minititle">
+                            <h1 class="schedules-h1">Opis planu</h1>
+                            <textarea class="schedules-input-two" rows="4" column="90" type="text" name="nazwa">Pojęcie kuchnia wegetariańśka</textarea>
+                        </div>
+                        <div class="schedules-minititle2">
+                            <h1 class="schedules-h1">Numer tygodnia</h1>
+                            <input class="schedules-input-three" type="text" name="nazwa" value="3" size="1">
+                        </div>
+                        <div class="calendars">
+                            <table class="calendars-thead">
+                                <thead class="calendars-tr">
+                                <tr>
+                                    <th class="calendars-tdinsite1"></th>
+                                    <th class="calendars-tdinsite">Śniadanie</th>
+                                    <th class="calendars-tdinsite">Drugie <br> śniadanie</th>
+                                    <th class="calendars-tdinsite">Zupa</th>
+                                    <th class="calendars-tdinsite">Drugie <br>danie</th>
+                                    <th class="calendars-tdinsite">Kolacja</th>
+                                </tr>
+                                </thead>
+                                <tbody class="calendars-tbody">
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Poniedziałek</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Wtorek</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Środa</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Czwartek</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Piątek</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Sobota</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                <tr class="calendars-td">
+                                    <td class="calendars-td-insite">Niedziela</td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+                                    <td><select name="food" class="calendars-food">
+                                        <option value="budyn">Budyń</option>
+                                        <option value="kisiel">Kisiel</option>
+                                        <option value="marmolada">Marmolada</option>
+                                    </select></td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="dodaj" id="dodaj">
                 <div class="desk__main">
                     <div class="desk__main_button">
-                        <div class="desk__button">
+                        <div class="desk__button" id="desk__buttonrecipe">
                             <div class="desk__plus"><i class="far fa-plus-square"></i></div>
                             <div>dodaj przepis</div>
                         </div>
-                        <div class="desk__button">
+                        <div class="desk__button" id="desk__buttonplan">
                             <div class="desk__plus"><i class="far fa-plus-square"></i></div>
                             <div>dodaj plan</div>
                         </div>
@@ -89,66 +380,66 @@
                 <div class="calendar">
                     <div class="calendar-header">Twój plan na nr tygodnia</div>
                     <div class="calendar-table">
-                    <table class="calendar-thead">
-                        <thead class="calendar-tr">
-                        <tr>
-                            <th class="calendar-td-insite">Poniedziałek</th>
-                            <th class="calendar-td-insite">Wtorek</th>
-                            <th class="calendar-td-insite">Środa</th>
-                            <th class="calendar-td-insite">Czwartek</th>
-                            <th class="calendar-td-insite">Piątek</th>
-                            <th class="calendar-td-insite">Sobota</th>
-                            <th class="calendar-td-insite">Niedziela</th>
-                        </tr>
-                        </thead>
-                        <tbody class="calendar-tbody">
-                        <tr class="calendar-td">
-                            <td class="calendar-td-insite">Śniadanie</td>
-                            <td >Śniadanie</td>
-                            <td >Śniadanie</td>
-                            <td >Śniadanie</td>
-                            <td >Śniadanie</td>
-                            <td >Śniadanie</td>
-                            <td >Śniadanie</td>
-                        </tr>
-                        <tr class="calendar-td">
-                            <td class="calendar-td-insite">Drugie <br>śniadanie</td>
-                            <td>Drugie <br> śniadanie</td>
-                            <td>Drugie <br>śniadanie</td>
-                            <td>Drugie <br>śniadanie</td>
-                            <td>Drugie <br>śniadanie</td>
-                            <td>Drugie <br>śniadanie</td>
-                            <td>Drugie <br>śniadanie</td>
-                        </tr>
-                        <tr class="calendar-td">
-                            <td class="calendar-td-insite">Zupa</td>
-                            <td>Zupa</td>
-                            <td>Zupa</td>
-                            <td>Zupa</td>
-                            <td>Zupa</td>
-                            <td>Zupa</td>
-                            <td>Zupa</td>
-                        </tr>
-                        <tr class="calendar-td">
-                            <td class="calendar-td-insite">Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                            <td>Drugie <br>danie</td>
-                        </tr>
-                        <tr class="calendar-td">
-                            <td class="calendar-td-insite">Kolacja</td>
-                            <td>Kolacja</td>
-                            <td>Kolacja</td>
-                            <td>Kolacja</td>
-                            <td>Kolacja</td>
-                            <td>Kolacja</td>
-                            <td>Kolacja</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                        <table class="calendar-thead">
+                            <thead class="calendar-tr">
+                            <tr>
+                                <th class="calendar-td-insite">Poniedziałek</th>
+                                <th class="calendar-td-insite">Wtorek</th>
+                                <th class="calendar-td-insite">Środa</th>
+                                <th class="calendar-td-insite">Czwartek</th>
+                                <th class="calendar-td-insite">Piątek</th>
+                                <th class="calendar-td-insite">Sobota</th>
+                                <th class="calendar-td-insite">Niedziela</th>
+                            </tr>
+                            </thead>
+                            <tbody class="calendar-tbody">
+                            <tr class="calendar-td">
+                                <td class="calendar-td-insite">Śniadanie</td>
+                                <td>Śniadanie</td>
+                                <td>Śniadanie</td>
+                                <td>Śniadanie</td>
+                                <td>Śniadanie</td>
+                                <td>Śniadanie</td>
+                                <td>Śniadanie</td>
+                            </tr>
+                            <tr class="calendar-td">
+                                <td class="calendar-td-insite">Drugie <br>śniadanie</td>
+                                <td>Drugie <br> śniadanie</td>
+                                <td>Drugie <br>śniadanie</td>
+                                <td>Drugie <br>śniadanie</td>
+                                <td>Drugie <br>śniadanie</td>
+                                <td>Drugie <br>śniadanie</td>
+                                <td>Drugie <br>śniadanie</td>
+                            </tr>
+                            <tr class="calendar-td">
+                                <td class="calendar-td-insite">Zupa</td>
+                                <td>Zupa</td>
+                                <td>Zupa</td>
+                                <td>Zupa</td>
+                                <td>Zupa</td>
+                                <td>Zupa</td>
+                                <td>Zupa</td>
+                            </tr>
+                            <tr class="calendar-td">
+                                <td class="calendar-td-insite">Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                                <td>Drugie <br>danie</td>
+                            </tr>
+                            <tr class="calendar-td">
+                                <td class="calendar-td-insite">Kolacja</td>
+                                <td>Kolacja</td>
+                                <td>Kolacja</td>
+                                <td>Kolacja</td>
+                                <td>Kolacja</td>
+                                <td>Kolacja</td>
+                                <td>Kolacja</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="calendar-bottom">
                         <div> << Poprzedni</div>
@@ -159,7 +450,6 @@
             </div>
         </div>
     </div>
-
 
 
 </section>

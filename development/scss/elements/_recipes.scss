@@ -1,0 +1,61 @@
+.app__desktop{
+}
+.recipes_list{}
+.recipes_list__container{
+  border: 1px $text-color solid;
+  margin: 50px;
+  background-color: white;
+}
+.recipes_list__header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem;
+  border-bottom: 1px $text-color solid;
+}
+.recipes_list__title{
+  color: $buttons-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.recipes_list__button{
+  font-size: 1.5rem;
+  color: $success-color;
+  background: white;
+  border: none;
+}
+.recipes_list__table{
+  margin: 1.5rem;
+  color: $text-color;
+  overflow-y: scroll;
+}
+.recipes_list__tablenav{
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 3rem;
+  align-content: center;
+  color: $header-color;
+  border-bottom: 1px $text-color solid;
+  border-top: 1px $text-color solid;
+}
+.recipes_list__buttons{
+  display: flex;
+}
+.trash__button{
+  color: $bin-color;
+  background: white;
+  border: none;
+}
+
+.edit__button{
+  color: $warning-color;
+  background: white;
+  border: none;
+}
+
+.recipes_list__rows{
+  border-bottom: 1px $text-color solid;
+  height: 4rem;
+}
+.recipes_list__text{
+  font-size: 0.7rem;
+}
