@@ -5,6 +5,7 @@ const btnName = document.querySelector("#btn__name");
 const userName = document.querySelector(".user__name");
 const firstPage = document.querySelector(".first__entry");
 const mainDesk = document.querySelector(".desk__main");
+const dodaj =document.querySelector("#dodaj");
 
 btnName.addEventListener("click", e => {
     e.preventDefault()
@@ -13,7 +14,8 @@ btnName.addEventListener("click", e => {
     } else {
         saveNameToLocalStorage();
         firstPage.classList.add("hide");
-        mainDesk.classList.add("show");
+       /* mainDesk.classList.add("show");*/
+        dodaj.classList.remove("dodaj")
     }
 });
 
@@ -22,6 +24,23 @@ function saveNameToLocalStorage() {
     localStorage.setItem("name", user);
     userName.innerHTML = localStorage.getItem("name");
 }
+//przejscia w app
+
+const deskButtonPlan = document.querySelector("#desk__buttonplan");
+const plan = document.querySelector("#dodaj-plan");
+
+deskButtonPlan.addEventListener("click", (e) =>{
+    dodaj.classList.add("dodaj")
+    plan.classList.remove("dodaj-plan")
+})
+
+const deskButtonRecipes =document.querySelector("#desk__buttonrecipe");
+const recipe = document.querySelector("#dodaj-przepis");;
+
+deskButtonRecipes.addEventListener("click", (e) => {
+    dodaj.classList.add("dodaj")
+    recipe.classList.remove("dodaj-przepis")
+})
 
 
 
