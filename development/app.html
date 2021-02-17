@@ -1,18 +1,149 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Zaplanuj Jedzonko</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  </head>
-  <body>
-    <header>
-      <h1>Hello App!</h1>
-    </header>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="header__app-cnt">
+        <h1 class="logo app__logo">
+            Zaplanuj <span>Jedzonko</span>
+        </h1>
+        <div class="header__user">
+            <p class="user__name">Imię</p>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </div>
+</header>
+<section class="app__body">
+    <div class="body__app-cnt">
+        <div class="sidebar">
+            <ul>
+                <li id="desk__app">Pulpit
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li id="recipes_app">Przepisy
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li id="plans_app">Plany
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="app__desktop">
+            <div class="dodaj">
+                <div class="desk__main">
+                    <div class="desk__main_button">
+                        <div class="desk__button">
+                            <div class="desk__plus"><i class="far fa-plus-square"></i></div>
+                            <div>dodaj przepis</div>
+                        </div>
+                        <div class="desk__button">
+                            <div class="desk__plus"><i class="far fa-plus-square"></i></div>
+                            <div>dodaj plan</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desk__delete1 ">
+                            <div class="desk__check"><i class="fas fa-info-circle"></i></div>
+                            <div class="desk-check-text">Masz już 99 przepisów, nieźle!</div>
+                            <div class="desk-check-test1"><i class="fas fa-times-circle"></i></div>
+                        </div>
+                        <div class="desk__delete2">
+                            <div class="desk__check"><i class="fas fa-exclamation-circle"></i></div>
+                            <div class="desk-check-text">Pamiętej aby dodać plan!</div>
+                            <div class="desk-check-test2"><i class="fas fa-times-circle"></i></div>
+                        </div>
+                        <div class="desk__delete3">
+                            <div class="desk__check"><i class="fas fa-check-circle"></i></div>
+                            <div class="desk-check-text">Świetnie że jesteś! Udanego Planowania i smacznego :)</div>
+                            <div class="desk-check-test3"><i class="fas fa-times-circle"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div class="calendar-header">Twój plan na nr tygodnia</div>
+                    <div class="calendar-table">
+                    <table class="calendar-thead">
+                        <thead class="calendar-tr">
+                        <tr>
+                            <th class="calendar-td-insite">Poniedziałek</th>
+                            <th class="calendar-td-insite">Wtorek</th>
+                            <th class="calendar-td-insite">Środa</th>
+                            <th class="calendar-td-insite">Czwartek</th>
+                            <th class="calendar-td-insite">Piątek</th>
+                            <th class="calendar-td-insite">Sobota</th>
+                            <th class="calendar-td-insite">Niedziela</th>
+                        </tr>
+                        </thead>
+                        <tbody class="calendar-tbody">
+                        <tr class="calendar-td">
+                            <td class="calendar-td-insite">Śniadanie</td>
+                            <td >Śniadanie</td>
+                            <td >Śniadanie</td>
+                            <td >Śniadanie</td>
+                            <td >Śniadanie</td>
+                            <td >Śniadanie</td>
+                            <td >Śniadanie</td>
+                        </tr>
+                        <tr class="calendar-td">
+                            <td class="calendar-td-insite">Drugie <br>śniadanie</td>
+                            <td>Drugie <br> śniadanie</td>
+                            <td>Drugie <br>śniadanie</td>
+                            <td>Drugie <br>śniadanie</td>
+                            <td>Drugie <br>śniadanie</td>
+                            <td>Drugie <br>śniadanie</td>
+                            <td>Drugie <br>śniadanie</td>
+                        </tr>
+                        <tr class="calendar-td">
+                            <td class="calendar-td-insite">Zupa</td>
+                            <td>Zupa</td>
+                            <td>Zupa</td>
+                            <td>Zupa</td>
+                            <td>Zupa</td>
+                            <td>Zupa</td>
+                            <td>Zupa</td>
+                        </tr>
+                        <tr class="calendar-td">
+                            <td class="calendar-td-insite">Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                            <td>Drugie <br>danie</td>
+                        </tr>
+                        <tr class="calendar-td">
+                            <td class="calendar-td-insite">Kolacja</td>
+                            <td>Kolacja</td>
+                            <td>Kolacja</td>
+                            <td>Kolacja</td>
+                            <td>Kolacja</td>
+                            <td>Kolacja</td>
+                            <td>Kolacja</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="calendar-bottom">
+                        <div> << Poprzedni</div>
+                        <div> Następny >></div>
+                    </div>
 
-    <script src="./js/app.js"></script>
-  </body>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<script src="./js/app.js"></script>
+</body>
 </html>
