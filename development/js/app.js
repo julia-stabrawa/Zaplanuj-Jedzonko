@@ -6,24 +6,34 @@ const userName = document.querySelector(".user__name");
 const firstPage = document.querySelector(".first__entry");
 const mainDesk = document.querySelector(".desk__main");
 
+function saveNameToLocalStorage() {
+    const user = givenName.value;
+    localStorage.setItem("name", user);
+    userName.innerHTML = localStorage.getItem("name");
+    firstPage.classList.add("hide");
+    mainDesk.classList.add("show");
+}
+
 btnName.addEventListener("click", e => {
     e.preventDefault()
     if (givenName.value === "") {
         alert("Musisz wpisać jakieś imię");
     } else {
         saveNameToLocalStorage();
-        firstPage.classList.add("hide");
-        mainDesk.classList.add("show");
     }
+    console.log(localStorage.getItem("name"));
 });
 
-function saveNameToLocalStorage() {
-    const user = givenName.value;
-    localStorage.setItem("name", user);
-    userName.innerHTML = localStorage.getItem("name");
+
+window.onload = () => {
+    if (localStorage.getItem("name") !== "null") {
+        userName.innerHTML = localStorage.getItem("name");
+        firstPage.classList.add("hide");
+        mainDesk.classList.add("show");
+    } else {
+        saveNameToLocalStorage();
+    }
 }
-
-
 
 
 // 3.2 Pulpit - widget powiadomienia
