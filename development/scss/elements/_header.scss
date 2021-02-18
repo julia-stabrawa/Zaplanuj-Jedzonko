@@ -2,6 +2,8 @@
   width: 100vw;
   padding: 40px;
   background-color: #5B605F;
+  position: fixed -20px;
+  z-index: 9999;
 
   .header__container {
     display: flex;
