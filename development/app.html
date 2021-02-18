@@ -66,7 +66,7 @@
                         <hr>
                         <div class="recipe-minititle">
                             <h1 class="recipe-h1">Nazwa przepisu</h1>
-                            <input class="recipe-input-one" type="text" name="nazwa"
+                            <input class="recipe-input-one" type="text" id="nazwa_text" name="nazwa"
                                    value="">
                         </div>
                         <div class="recipe-minititle">
@@ -77,36 +77,20 @@
                             <div class="recipe-minititle2">
                                 <p class="recipe-p1">INSTRUKCJE</p>
                                 <hr>
-                                <p><input class="recipe-input-three" type="text" name="nazwa" value="" size="12">
-                                    <button class="button">+</button>
-                                <div id="instr-add" class="scroll"> Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Obcaecati provident quos vitae. A alias architecto consectetur corporis cum
-                                    dignissimos, dolor dolorem dolores earum eius esse eum eveniet ex explicabo fugiat
-                                    fugit impedit incidunt ipsa itaque iure iusto laborum minima nam natus non nulla
-                                    numquam pariatur quas quidem quo recusandae repellendus sapiente sed suscipit
-                                    tenetur totam vel? Animi asperiores autem cumque, dolorem exercitationem incidunt,
-                                    magni officiis quidem similique sit tenetur veritatis, vitae voluptates.
-                                    Exercitationem explicabo ipsum omnis quas qui temporibus unde ut. Assumenda debitis
-                                    delectus eaque enim id, ipsa natus obcaecati omnis optio pariatur quaerat quasi
-                                    quia, rerum sunt vitae? Nobis?<i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt"></i>
+                                <p><input class="recipe-input-three" type="text" id="instrukcje_text" value="" size="12">
+                                    <button class="button" id="dodaj_instrukcje_button" onclick="dodajInstrukcje();">+</button>
+                                <div id="instr-add" class="scroll">
+                                    <ul class = "instruction-ul"></ul>
                                 </div>
                                 </p>
                             </div>
                             <div class="recipe-minititle3 ">
                                 <p class="recipe-p1">SKŁADNIKI</p>
                                 <hr>
-                                <p><input class="recipe-input-for" type="text" name="nazwa" value="" size="12">
-                                    <button class="button">+</button>
-                                <div id="instr2-add" class="scroll"> Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Ab ad aliquam aliquid aperiam, atque distinctio eligendi eos facilis fugit
-                                    ipsa iste magni maxime modi molestiae natus necessitatibus nemo odio praesentium
-                                    provident quos, recusandae rem rerum sequi similique tenetur totam ullam, velit
-                                    veniam veritatis voluptate? Aliquid assumenda atque blanditiis consequatur cumque
-                                    dolores explicabo fuga, illo in ipsam labore natus omnis placeat possimus
-                                    praesentium quidem quos repellat sequi suscipit temporibus totam voluptas.
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt"></i>
+                                <p><input class="recipe-input-for" type="text" id="skladniki_text" name="nazwa" value="" size="12">
+                                    <button class="button" id="dodaj_skladniki_button" onclick="dodajSkladniki();">+</button>
+                                <div id="instr2-add" class="scroll">
+                                    <ul class="ingredients-ul"></ul>
                                 </div>
                                 </p>
                             </div>
@@ -114,6 +98,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <div class="dodaj-plan" id="dodaj-plan">
