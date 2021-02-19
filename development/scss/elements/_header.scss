@@ -1,23 +1,23 @@
 .header {
-  height: 100%;
+  width: 100vw;
   padding: 40px;
   background-color: #5B605F;
+  position: fixed -20px;
+  z-index: 9999;
 
   .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 2rem;
   }
 }
-
 
 .logo {
   font-family: Charmonman, sans-serif;
   font-size: 3rem;
   color: white;
   font-weight: 300;
-  padding-left: 200px;
 }
 
 .logo span {
@@ -37,8 +37,7 @@
   padding: 0;
 }
 
-.nav__el,
-.nav__el1 {
+.nav__el {
   font-family: Open Sans, sans-serif;
   font-weight: 400;
   color: white;
@@ -46,18 +45,15 @@
   padding: 70px;
   letter-spacing: 0.04rem;
   text-decoration: none;
+  transition: 0.5s;
 }
 
-.nav__el1 {
-  color: #E58A20;
-}
 
 .nav__el:hover {
   color: lightslategrey;
   transition: color .5s ease-in-out;
 }
 
-.nav__el1:hover {
+.nav__el-active {
   color: darkorange;
-  transition: color .5s ease-in-out;
 }

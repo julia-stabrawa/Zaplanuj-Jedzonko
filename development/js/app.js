@@ -54,6 +54,15 @@ window.onload = () => {
 //     });
 // }
 
+// const btnRecipe = document.querySelector("#desk__buttonrecipe");
+// const recipeSection = document.querySelector("#dodaj-przepis");
+//
+// btnRecipe.addEventListener("click", e => {
+//     e.preventDefault();
+//     recipeSection.classList.remove("dodaj-przepis");
+//     mainDesk.classList.add("hide");
+// });
+
 
 //przejscia w app
 

@@ -1,27 +1,29 @@
 .author {
   background-color: #CFD3D6;
-
-  .author__container {
-    width: 100%;
-  }
-}
-
-.author-aboutme {
   display: flex;
   justify-content: center;
+
+}
+.author__container{
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+}
+
+.author__about {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 60px;
+  padding: 60px 0 60px 0;
 
   .author__text {
-    width: 700px;
-    padding-right: 50px;
+    width: 60%;
   }
 }
 
 .author__title {
   font-weight: 400;
-  font-size: 1.7rem;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
   color: #222;
   padding-bottom: 25px;
 }
@@ -29,17 +31,15 @@
 .author__description {
   font-weight: 400;
   font-size: 1.2rem;
-  font-family: 'Open Sans', sans-serif;
   color: #222;
   line-height: 25px;
 }
 
 .author__img {
-  padding-right: 70px;
-}
+  width: 35%;
 
-.author__img img {
-  width: 220px;
-  height: 300px;
+  img{
+    width: 100%;
+  }
 }
 
