@@ -102,3 +102,94 @@ const delete3 = document.querySelector(".desk__delete3");
 schowajto3.addEventListener("click", (e) => {
     delete3.classList.add("schowaj")
 })
+
+//btn
+const btnRecipe = document.querySelector("#desk__buttonrecipe");
+const recipeSection = document.querySelector("#dodaj-przepis");
+btnRecipe.addEventListener("click", e => {
+    e.preventDefault();
+    recipeSection.classList.remove("dodaj-przepis");
+    mainDesk.classList.add("hide");
+});
+
+//============================================================================================
+// 4.2 Dodanie nowego przepisu - logika
+
+const dodaj_instrukcje_button = document.getElementById("dodaj_instrukcje_button");
+const dodaj_skladniki_button = document.getElementById("dodaj_skladniki_button");
+// pola input (tekstowe edycyjne)
+const instrukcje = document.getElementById( "instrukcje_text" );
+const skladniki = document.getElementById( "skladniki_text" );
+// kontener
+const kontenterInstrukcje = document.getElementById("recipe-minititle2-all");
+const instructionul = document .getElementById( "instruction-ul");
+
+
+var instrukcjaStruktura = {
+    nazwa: "" , //
+    przyciskEdycja: "",
+    przyciskUsun: ""//
+};
+
+var skladnikiStruktura = {
+    nazwa: "" , //
+    przyciskEdycja: "",
+    przyciskUsun: ""//
+};
+
+function renderSingleInstrukcja (instrukcja) {
+// tworzymy nowy element LI i dodajemy go do HTML
+    var newLi = document.createElement( "LI" );
+    newLi.innerText = instrukcja;
+    instructionul.appendChild(newLi);
+}
+dodaj_instrukcje_button.addEventListener("click", function(e) {
+    e.preventDefault();
+
+});
+
+function saveElementToLocalStorage (newObject) {
+    localStorage.setItem('testObject', JSON.stringify(newObject));
+}
+
+
+//dodaj_instrucje_button.addEventListener("click", dodajInstrukcje(), true);
+function dodajInstrukcje() {
+    let instrukcje_text = document.getElementById("instrukcje_text");
+    // walidacja danych
+    if (instrukcje_text.value.length ===0 ) {
+        alert("Wpisz instrukcje. ");
+    }
+    else
+    {
+        skladnikiStruktura.nazwa = instrukcje.value;
+        skladnikiStruktura.przyciskEdycja = " <button class='far fa-edit'></button>";
+        skladnikiStruktura.przyciskUsun = " <button class='far fa-trash-alt'></button><br>";
+        localStorage.setItem(skladnikiStruktura.nazwa, JSON.stringify(skladnikiStruktura));
+
+        let odczytanyElement = localStorage.getItem(skladnikiStruktura.nazwa);
+        let ele = document.getElementById('instr-add');
+
+        ele.innerHTML = localStorage.getElement(skladnikiStruktura.nazwa, JSON.parse(odczytanyElement));
+        //localStorage.setItem("instrukcja", instrukcje_text.value );
+        //alert (localStorage.getItem("instrukcja"));
+        /*let ele = document.getElementById('instr-add');
+        ele.innerHTML += (localStorage.getItem("instrukcja")) + " <button class='far fa-edit'></button><button class='far fa-trash-alt'></button><br>";
+        */
+
+    }
+}
+function dodajSkladniki() {
+    let skladniki_text = document.getElementById("skladniki_text");
+// walidacja danych
+    if (skladniki_text.value.length ===0 ) {
+        alert("Wpisz składniki. ");
+    }
+    else
+    {
+        localStorage.setItem("skladniki", skladniki_text.value );
+        //alert (localStorage.getItem("skladniki"));
+        let ele = document.getElementById('instr2-add');
+        ele.innerHTML += (localStorage.getItem("skladniki")) + " <button class='far fa-edit'></button><button class='far fa-trash-alt'></button><br>";
+    }
+}
