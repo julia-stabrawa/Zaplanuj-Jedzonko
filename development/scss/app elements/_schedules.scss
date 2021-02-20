@@ -1,4 +1,6 @@
-
+.usunmnie{
+  display: none;
+}
 .schedules_list{}
 .schedules_list__container{
   border: 1px $text-color solid;
@@ -62,6 +64,10 @@
   width: 50px;
   border-bottom: 1px $text-color solid;
 }
+.schedules_list__numberos{
+  width: 50px;
+  border-bottom: 1px $text-color solid;
+}
 .schedules_list__name{
   width: 150px;
   border-bottom: 1px $text-color solid;
@@ -74,5 +80,9 @@
 .schedules_list__text{
   width: 700px;
   font-size: 0.7rem;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__maintext{
+  width: 700px;
   border-bottom: 1px $text-color solid;
 }

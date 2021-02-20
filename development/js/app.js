@@ -353,8 +353,12 @@ const last = document.querySelector(".last");
 
 let allRecipes = JSON.parse(localStorage.getItem("recipes"));
 
+
+
 let z = -1;
 let inside = allRecipes[z]
+
+
 
 
 next.addEventListener("click", e =>{
