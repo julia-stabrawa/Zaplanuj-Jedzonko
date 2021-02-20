@@ -6,6 +6,7 @@ let numberofplan = document.querySelectorAll(".schedules_list__number");
 let schedurList = document.querySelector(".schedules_list__container");
 let dodajplan = document.querySelector("#dodaj-plan");
 
+
 numberofplan.forEach((el, i) => {
     el.innerHTML= `${i +1} `
 })

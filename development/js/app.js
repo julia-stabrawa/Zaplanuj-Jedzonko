@@ -287,58 +287,60 @@ var newRecipe = {
 };
 
 saveRecipeBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    newRecipe.title = title.value;
-    newRecipe.title1 = title1.value;
-    newRecipe.title2 = title2.value;
-    newRecipe.id1 = id1.value;
-    newRecipe.id2 = id2.value;
-    newRecipe.id3 = id3.value;
-    newRecipe.id4 = id4.value;
-    newRecipe.id5 = id5.value;
-    newRecipe.id21 = id21.value;
-    newRecipe.id22 = id22.value;
-    newRecipe.id23 = id23.value;
-    newRecipe.id24 = id24.value;
-    newRecipe.id25 = id25.value;
-    newRecipe.id31 = id31.value;
-    newRecipe.id32 = id32.value;
-    newRecipe.id33 = id33.value;
-    newRecipe.id34 = id34.value;
-    newRecipe.id35 = id35.value;
-    newRecipe.id41 = id41.value;
-    newRecipe.id42 = id42.value;
-    newRecipe.id43 = id43.value;
-    newRecipe.id44 = id44.value;
-    newRecipe.id45 = id45.value;
-    newRecipe.id51 = id51.value;
-    newRecipe.id52 = id52.value;
-    newRecipe.id53 = id53.value;
-    newRecipe.id54 = id54.value;
-    newRecipe.id55 = id55.value;
-    newRecipe.id61 = id61.value;
-    newRecipe.id62 = id62.value;
-    newRecipe.id63 = id63.value;
-    newRecipe.id64 = id64.value;
-    newRecipe.id65 = id65.value;
-    newRecipe.id71 = id71.value;
-    newRecipe.id72 = id72.value;
-    newRecipe.id73 = id73.value;
-    newRecipe.id74 = id74.value;
-    newRecipe.id75 = id75.value;
+    if (title.value === ""||title1.value ===""||title2.value ==="") { alert("Prosimy o podanie wszystkich danych")}
+    else {
+        e.preventDefault();
+        newRecipe.title = title.value;
+        newRecipe.title1 = title1.value;
+        newRecipe.title2 = title2.value;
+        newRecipe.id1 = id1.value;
+        newRecipe.id2 = id2.value;
+        newRecipe.id3 = id3.value;
+        newRecipe.id4 = id4.value;
+        newRecipe.id5 = id5.value;
+        newRecipe.id21 = id21.value;
+        newRecipe.id22 = id22.value;
+        newRecipe.id23 = id23.value;
+        newRecipe.id24 = id24.value;
+        newRecipe.id25 = id25.value;
+        newRecipe.id31 = id31.value;
+        newRecipe.id32 = id32.value;
+        newRecipe.id33 = id33.value;
+        newRecipe.id34 = id34.value;
+        newRecipe.id35 = id35.value;
+        newRecipe.id41 = id41.value;
+        newRecipe.id42 = id42.value;
+        newRecipe.id43 = id43.value;
+        newRecipe.id44 = id44.value;
+        newRecipe.id45 = id45.value;
+        newRecipe.id51 = id51.value;
+        newRecipe.id52 = id52.value;
+        newRecipe.id53 = id53.value;
+        newRecipe.id54 = id54.value;
+        newRecipe.id55 = id55.value;
+        newRecipe.id61 = id61.value;
+        newRecipe.id62 = id62.value;
+        newRecipe.id63 = id63.value;
+        newRecipe.id64 = id64.value;
+        newRecipe.id65 = id65.value;
+        newRecipe.id71 = id71.value;
+        newRecipe.id72 = id72.value;
+        newRecipe.id73 = id73.value;
+        newRecipe.id74 = id74.value;
+        newRecipe.id75 = id75.value;
 
-    saveRecipeToLocalStorage(newRecipe);
-    dodaj.classList.remove("dodaj")
-    plan.classList.add("dodaj-plan")
-});
+        saveRecipeToLocalStorage(newRecipe);
+        dodaj.classList.remove("dodaj")
+        plan.classList.add("dodaj-plan")
+    }});
 
 
 
 function saveRecipeToLocalStorage(newObject) {
     let dataFromLocalStorage = [];
-    if (title.value === ""||title1.value ===""||title2.value ==="") { alert("Uzupełnij dane")}
 
-    else if (localStorage.getItem("recipes") != null) {
+
+    if (localStorage.getItem("recipes") != null) {
         dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
         dataFromLocalStorage.push(newObject);
         localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
