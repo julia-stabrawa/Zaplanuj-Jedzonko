@@ -55,7 +55,6 @@ function deleteRecipes() {
     const allRecipes = localStorage.getItem("recipes");
     const recipesTable = JSON.parse(allRecipes);
 
-    localStorage.removeItem("recipes");
 
 }
 
@@ -180,6 +179,8 @@ function saveRecipeToLocalStorage(newObject) {
         localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
     }
 }
+const mainCalendar = document.querySelector(".calendar");
+const mainDesk = document.querySelector(".desk__main");
 
 saveRecipeBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -190,7 +191,8 @@ saveRecipeBtn.addEventListener("click", function (e) {
     editedRecipe.key = "recipes";
     saveRecipeToLocalStorage(editedRecipe);
     console .log( "Zapisano: " , editedRecipe);
-    recipesList.classList.remove("hide");
+    mainDesk.classList.remove("hide");
+    mainCalendar.classList.remove("hide");
     editRecipe.classList.add("hide");
 
 });

@@ -1,3 +1,18 @@
+//name from Local Storage
+
+const userName = document.querySelector(".user__name");
+
+function giveNameFromLocalStorage() {
+    userName.innerHTML = localStorage.getItem("name");
+}
+
+giveNameFromLocalStorage();
+window.onload = () => {
+    if (localStorage.getItem("name") !== null) {
+        userName.innerHTML = localStorage.getItem("name");
+    }
+}
+
 let allRecipesContainer = document.querySelector(".schedules__tbody2");
 let rederRecipesBtn = document.querySelector(".schedules_list__button");
 let schedulesTrushButton = document.querySelectorAll(".schedules_trash__button");
