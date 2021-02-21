@@ -154,7 +154,6 @@ editRecipeBtn.forEach(el => {
 });
 
 const saveRecipeBtn = document.querySelector(".recipe-exit");
-const addRecipe = document.querySelector("#edytuj-przepis");
 
 const editedRecipe = {
     key: "",
@@ -191,8 +190,9 @@ saveRecipeBtn.addEventListener("click", function (e) {
     editedRecipe.key = "recipes";
     saveRecipeToLocalStorage(editedRecipe);
     console .log( "Zapisano: " , editedRecipe);
-    mainDesk.classList.remove("hide");
-    mainCalendar.classList.remove("hide");
-    editRecipe.classList.add("hide");
+    dodaj.classList.remove("dodaj");
+    editRecipe.classList.add("dodaj-przepis");
+    mainDesk.classList.toggle("hide");
+    mainCalendar.classList.toggle("hide");
 
 });

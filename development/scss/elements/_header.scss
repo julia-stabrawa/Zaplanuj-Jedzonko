@@ -18,6 +18,19 @@
   font-size: 3rem;
   color: white;
   font-weight: 300;
+
+    a {
+      font-family: Charmonman, sans-serif;
+      font-size: 3rem;
+      color: $background-color;
+      font-weight: 300;
+      text-decoration: none;
+
+      span {
+        font-weight: 1000;
+        color: $buttons-color;
+      }
+    }
 }
 
 .logo span {
@@ -38,7 +51,6 @@
 }
 
 .nav__el {
-  font-family: Open Sans, sans-serif;
   font-weight: 400;
   color: white;
   font-size: 1.25rem;
@@ -50,7 +62,7 @@
 
 
 .nav__el:hover {
-  color: lightslategrey;
+  color: $buttons-color;
   transition: color .5s ease-in-out;
 }
 

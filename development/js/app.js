@@ -187,10 +187,10 @@ saveRecBtn.addEventListener("click", function (e) {
     newRec.key = "recipes";
     saveRecToLocalStorage(newRec);
     console .log( "Zapisano: " , newRec);
-    addRecipe.classList.add("hide");
-    mainDesk.classList.remove("hide");
-    mainCalendar.classList.remove("hide");
-
+    dodaj.classList.remove("dodaj")
+    addRecipe.classList.add("dodaj-przepis");
+    mainDesk.classList.toggle("hide");
+    mainCalendar.classList.toggle("hide");
 });
 
 
