@@ -357,36 +357,36 @@ function saveRecipeToLocalStorage(newObject) {
     let dataFromLocalStorage = [];
 
 
-    if (localStorage.getItem("recipes") != null) {
-        dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
+    if (localStorage.getItem("schedules") != null) {
+        dataFromLocalStorage = JSON.parse(localStorage.getItem("schedules"));
         dataFromLocalStorage.push(newObject);
-        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+        localStorage.setItem("schedules", JSON.stringify(dataFromLocalStorage));
     } else {
         dataFromLocalStorage.push(newObject);
-        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+        localStorage.setItem("schedules", JSON.stringify(dataFromLocalStorage));
     }
 }
 const calendar= document.querySelector(".calendar");
 const next = document.querySelector(".next");
 const last = document.querySelector(".last");
 
-let allRecipes = JSON.parse(localStorage.getItem("recipes"));
+let allSchedules = JSON.parse(localStorage.getItem("schedules"));
 
 
 
 let z = -1;
-let inside = allRecipes[z]
+let inside = allSchedules[z]
 
 
 
 
 next.addEventListener("click", e =>{
-    inside = allRecipes[z = z + 1 ]
+    inside = allSchedules[z = z + 1 ]
     generowanieplanu();
 })
 
 last.addEventListener("click", e =>{
-    inside = allRecipes[z = z - 1 ]
+    inside = allSchedules[z = z - 1 ]
     generowanieplanu();
 })
 

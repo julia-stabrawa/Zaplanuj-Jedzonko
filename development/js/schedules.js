@@ -17,24 +17,24 @@ let allRecipesContainer = document.querySelector(".schedules__tbody2");
 let rederRecipesBtn = document.querySelector(".schedules_list__button");
 let schedulesTrushButton = document.querySelectorAll(".schedules_trash__button");
 let schedulesEditButton = document.querySelectorAll(".schedules_edit__button");
-let numberofplan = document.querySelectorAll(".schedules_list__number");
+/*let numberofplan = document.querySelectorAll(".schedules_list__number");*/
 let schedurList = document.querySelector(".schedules_list__container");
 let dodajplan = document.querySelector("#dodaj-plan");
 
-
+let numberofplan = document.querySelectorAll(".schedules_list__number");
 numberofplan.forEach((el, i) => {
-    el.innerHTML= `${i +1} `
+    el.innerHTML= `${i +1}`;
 })
 
 
 rederRecipesBtn.addEventListener("click", renderAllRecipes);
 
-let allRecipes = JSON.parse(localStorage.getItem("recipes"));
+let allSchedules = JSON.parse(localStorage.getItem("schedules"));
 
 function renderAllRecipes() {
     allRecipesContainer.innerHTML = "";
     /*let allRecipes = JSON.parse(localStorage.getItem("recipes"));*/
-    allRecipes.forEach((el, i, j) => {
+    allSchedules.forEach((el, i, j) => {
 
         const tr = document.createElement("tr")
         tr.innerHTML = ` 
@@ -61,8 +61,9 @@ function renderAllRecipes() {
             el.addEventListener("click", e => {
                 e.preventDefault()
                 el.parentNode.parentNode.remove()
-                allRecipes.splice(`${i}`, 1)
-                localStorage.setItem("recipes", JSON.stringify(allRecipes));
+                allSchedules.splice(`${i}`, 1)
+
+                localStorage.setItem("schedules", JSON.stringify(allSchedules));
                 let numberofplan = document.querySelectorAll(".schedules_list__number");
                 numberofplan.forEach((el, i) => {
                     el.innerHTML= `${i +1} `
@@ -73,8 +74,8 @@ function renderAllRecipes() {
         schedulesEditButton.forEach(el => {
             el.addEventListener("click", e => {
                 e.preventDefault()
-                allRecipes.splice(`${i}`, 1)
-                localStorage.setItem("recipes", JSON.stringify(allRecipes));
+                allSchedules.splice(`${i}`, 1)
+                localStorage.setItem("schedules", JSON.stringify(allSchedules));
                 schedurList.innerHTML = "";
                 const div = document.createElement("div")
                 div.innerHTML = `
@@ -465,13 +466,13 @@ function renderAllRecipes() {
                 function saveRecipeToLocalStorage(newObject) {
                     let dataFromLocalStorage = [];
 
-                    if (localStorage.getItem("recipes") != null) {
-                        dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
+                    if (localStorage.getItem("schedules") != null) {
+                        dataFromLocalStorage = JSON.parse(localStorage.getItem("schedules"));
                         dataFromLocalStorage.push(newObject);
-                        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+                        localStorage.setItem("schedules", JSON.stringify(dataFromLocalStorage));
                     } else {
                         dataFromLocalStorage.push(newObject);
-                        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+                        localStorage.setItem("schedules", JSON.stringify(dataFromLocalStorage));
                     }
                 }
             })
