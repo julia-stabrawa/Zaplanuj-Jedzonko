@@ -67,30 +67,34 @@
                         <div class="recipe-minititle">
                             <h1 class="recipe-h1">Nazwa przepisu</h1>
                             <input class="recipe-input-one" type="text" id="nazwa_text" name="nazwa"
-                                   value="">
+                                   placeholder="Wpisz nazwę dania">
                         </div>
                         <div class="recipe-minititle">
                             <h1 class="recipe-h1">Opis przepisu</h1>
-                            <textarea class="recipe-input-two" rows="4" column="90" type="text" name="nazwa"></textarea>
+                            <input class="recipe-input-two" type="text" name="nazwa" placeholder="Wpisz opis dania">
                         </div>
                         <div id="recipe-minititle2-all">
                             <div class="recipe-minititle2">
                                 <p class="recipe-p1">INSTRUKCJE</p>
                                 <hr>
-                                <p><input class="recipe-input-three" type="text" id="instrukcje_text" value="" size="12">
-                                    <button class="button" id="dodaj_instrukcje_button" onclick="dodajInstrukcje();">+</button>
+                                <p><input class="recipe-input-three" type="text" id="instrukcje_text" placeholder="Dodaj instrukcję">
+                                    <button class="button" id="dodaj_instrukcje_button">+</button>
                                 <div id="instr-add" class="scroll">
-                                    <ul class = "instruction-ul"></ul>
+                                    <ul class = "instruction-ul">
+
+                                    </ul>
                                 </div>
                                 </p>
                             </div>
                             <div class="recipe-minititle3 ">
                                 <p class="recipe-p1">SKŁADNIKI</p>
                                 <hr>
-                                <p><input class="recipe-input-for" type="text" id="skladniki_text" name="nazwa" value="" size="12">
-                                    <button class="button" id="dodaj_skladniki_button" onclick="dodajSkladniki();">+</button>
+                                <p><input class="recipe-input-for" type="text" id="skladniki_text" name="nazwa" placeholder="Dodaj składniki">
+                                    <button class="button" id="dodaj_skladniki_button">+</button>
                                 <div id="instr2-add" class="scroll">
-                                    <ul class="ingredients-ul"></ul>
+                                    <ul class="ingredients-ul">
+
+                                    </ul>
                                 </div>
                                 </p>
                             </div>

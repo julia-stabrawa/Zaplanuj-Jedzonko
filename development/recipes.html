@@ -41,21 +41,6 @@
         </div>
         <div class="app__desktop">
 
-            <div class="first__entry">
-                <div class="first__entry-cnt">
-                    <h2>Witaj,</h2>
-                    <h3>wygląda na to że jesteś tutaj pierwszy raz!</h3>
-                    <form class="entry__form">
-                        <div class="form__row">
-                            <input id="name" name="name" type="text" placeholder="tutaj wpisz jak masz na imię"
-                                   class="entry__form-input">
-                            <button href="#" id="btn__name">Gotowe!</button>
-                        </div>
-                    </form>
-                    <p>Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)</p>
-                </div>
-            </div>
-
             <section class="recipes_list">
                 <div class="recipes_list__container">
                     <div class="recipes_list__header">
@@ -71,90 +56,63 @@
                                 <td>OPIS</td>
                                 <td>AKCJE</td>
                             </tr>
-                            <tr class="recipes_list__rows">
-                                <td class="recipes_list__number">1.</td>
-                                <td class="recipes_list__name">Zapiekanka z ziemniakami i brukselką</td>
-                                <td class="recipes_list__text">Mamusina najlepsza zapiekanka pod słońcem. Można ją podać
-                                    jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy
-                                    paprykowej, sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z
-                                    zaleceniami Makłowicza, podawać z dobrz dobranym winkiem ;)
-                                </td>
-                                <td>
-                                    <div class="recipes_list__buttons">
-                                        <button class="edit__button"><i class="far fa-edit"></i></button>
-                                        <button class="trash__button"><i class="far fa-trash-alt"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="recipes_list__rows">
-                                <td class="recipes_list__number">2.</td>
-                                <td class="recipes_list__name">Zapiekanka z ziemniakami i brukselką</td>
-                                <td class="recipes_list__text">Mamusina najlepsza zapiekanka pod słońcem. Można ją podać
-                                    jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy
-                                    paprykowej, sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z
-                                    zaleceniami Makłowicza, podawać z dobrz dobranym winkiem ;)
-                                </td>
-                                <td>
-                                    <div class="recipes_list__buttons">
-                                        <button class="edit__button"><i class="far fa-edit"></i></button>
-                                        <button class="trash__button"><i class="far fa-trash-alt"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="recipes_list__rows">
-                                <td class="recipes_list__number">3.</td>
-                                <td class="recipes_list__name">Zapiekanka z ziemniakami i brukselką</td>
-                                <td class="recipes_list__text">Mamusina najlepsza zapiekanka pod słońcem. Można ją podać
-                                    jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy
-                                    paprykowej, sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z
-                                    zaleceniami Makłowicza, podawać z dobrz dobranym winkiem ;)
-                                </td>
-                                <td>
-                                    <div class="recipes_list__buttons">
-                                        <button class="edit__button"><i class="far fa-edit"></i></button>
-                                        <button class="trash__button"><i class="far fa-trash-alt"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="recipes_list__rows">
-                                <td class="recipes_list__number">4.</td>
-                                <td class="recipes_list__name">Zapiekanka z ziemniakami i brukselką</td>
-                                <td class="recipes_list__text">Mamusina najlepsza zapiekanka pod słońcem. Można ją podać
-                                    jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy
-                                    paprykowej, sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z
-                                    zaleceniami Makłowicza, podawać z dobrz dobranym winkiem ;)
-                                </td>
-                                <td>
-                                    <div class="recipes_list__buttons">
-                                        <button class="edit__button"><i class="far fa-edit"></i></button>
-                                        <button class="trash__button"><i class="far fa-trash-alt"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="recipes_list__rows">
-                                <td class="recipes_list__number">5.</td>
-                                <td class="recipes_list__name">Zapiekanka z ziemniakami i brukselką</td>
-                                <td class="recipes_list__text">Mamusina najlepsza zapiekanka pod słońcem. Można ją podać
-                                    jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy
-                                    paprykowej, sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z
-                                    zaleceniami Makłowicza, podawać z dobrz dobranym winkiem ;)
-                                </td>
-                                <td>
-                                    <div class="recipes_list__buttons">
-                                        <button class="edit__button"><i class="far fa-edit"></i></button>
-                                        <button class="trash__button"><i class="far fa-trash-alt"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
+
+            <div class="edytuj-przepis hide" id="edytuj-przepis">
+                <div class="recipe">
+                    <div class="recipe-all">
+                        <div class="recipe-top">
+                            <div class="recipe-title">EDYTUJ PRZEPIS</div>
+                            <button class="recipe-exit">Zapisz i zamknij</button>
+                        </div>
+                        <hr>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Nazwa przepisu</h1>
+                            <input class="recipe-input-one" type="text" id="nazwa_text" name="nazwa"
+                                   placeholder="Wpisz nazwę dania">
+                        </div>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Opis przepisu</h1>
+                            <input class="recipe-input-two" type="text" name="nazwa" placeholder="Wpisz opis dania">
+                        </div>
+                        <div id="recipe-minititle2-all">
+                            <div class="recipe-minititle2">
+                                <p class="recipe-p1">INSTRUKCJE</p>
+                                <hr>
+                                <p><input class="recipe-input-three" type="text" id="instrukcje_text" placeholder="Dodaj instrukcję">
+                                    <button class="button" id="dodaj_instrukcje_button">+</button>
+                                <div id="instr-add" class="scroll">
+                                    <ul class = "instruction-ul">
+
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <div class="recipe-minititle3 ">
+                                <p class="recipe-p1">SKŁADNIKI</p>
+                                <hr>
+                                <p><input class="recipe-input-for" type="text" id="skladniki_text" name="nazwa" placeholder="Dodaj składniki">
+                                    <button class="button" id="dodaj_skladniki_button">+</button>
+                                <div id="instr2-add" class="scroll">
+                                    <ul class="ingredients-ul">
+
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<script src="./js/app.js"></script>
+<script src="./js/recipes.js"></script>
 </body>
 </html>

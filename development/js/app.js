@@ -1,5 +1,3 @@
-
-
 //2.3 Dodawanie imienia
 
 const givenName = document.querySelector("#name");
@@ -15,6 +13,7 @@ function saveNameToLocalStorage() {
     localStorage.setItem("name", user);
     userName.innerHTML = localStorage.getItem("name");
 }
+
 btnName.addEventListener("click", e => {
     e.preventDefault()
     if (givenName.value === "") {
@@ -31,7 +30,7 @@ window.onload = () => {
     if (localStorage.getItem("name") !== null) {
         userName.innerHTML = localStorage.getItem("name");
         firstPage.classList.add("hide");
-    }else{
+    } else {
         firstPage.classList.remove("hide");
     }
 }
@@ -54,15 +53,6 @@ window.onload = () => {
 //     });
 // }
 
-// const btnRecipe = document.querySelector("#desk__buttonrecipe");
-// const recipeSection = document.querySelector("#dodaj-przepis");
-//
-// btnRecipe.addEventListener("click", e => {
-//     e.preventDefault();
-//     recipeSection.classList.remove("dodaj-przepis");
-//     mainDesk.classList.add("hide");
-// });
-
 
 //przejscia w app
 
@@ -70,20 +60,19 @@ const deskButtonPlan = document.querySelector("#desk__buttonplan");
 const plan = document.querySelector("#dodaj-plan");
 const dodaj = document.querySelector("#dodaj");
 
-deskButtonPlan.addEventListener("click", (e) =>{
+deskButtonPlan.addEventListener("click", (e) => {
     dodaj.classList.add("dodaj")
     plan.classList.remove("dodaj-plan")
 })
 
-const deskButtonRecipes =document.querySelector("#desk__buttonrecipe");
-const recipe = document.querySelector("#dodaj-przepis");;
+const deskButtonRecipes = document.querySelector("#desk__buttonrecipe");
+const recipe = document.querySelector("#dodaj-przepis");
+;
 
 deskButtonRecipes.addEventListener("click", (e) => {
     dodaj.classList.add("dodaj")
     recipe.classList.remove("dodaj-przepis")
 })
-
-
 
 
 // 3.2 Pulpit - widget powiadomienia
@@ -104,96 +93,124 @@ schowajto3.addEventListener("click", (e) => {
     delete3.classList.add("schowaj")
 })
 
-//btn
+// btn
 const btnRecipe = document.querySelector("#desk__buttonrecipe");
 const recipeSection = document.querySelector("#dodaj-przepis");
+const mainCalendar = document.querySelector(".calendar");
 btnRecipe.addEventListener("click", e => {
     e.preventDefault();
     recipeSection.classList.remove("dodaj-przepis");
     mainDesk.classList.add("hide");
+    mainCalendar.classList.add("hide");
 });
 
-//============================================================================================
-// 4.2 Dodanie nowego przepisu - logika
+//ADD RECIPE FORM=================
 
-const dodaj_instrukcje_button = document.getElementById("dodaj_instrukcje_button");
-const dodaj_skladniki_button = document.getElementById("dodaj_skladniki_button");
-// pola input (tekstowe edycyjne)
-const instrukcje = document.getElementById( "instrukcje_text" );
-const skladniki = document.getElementById( "skladniki_text" );
-// kontener
-const kontenterInstrukcje = document.getElementById("recipe-minititle2-all");
-const instructionul = document .getElementById( "instruction-ul");
+// buttons add in ingredients and instructions
+const titleRecipe = document.querySelector(".recipe-input-one");
+const descriptionRecipe = document.querySelector(".recipe-input-two");
+const instructions = document.querySelector("#instrukcje_text");
+const instructionsBtn = document.querySelector("#dodaj_instrukcje_button");
+const instructionsList = document.querySelector(".instruction-ul");
+const ingredients = document.querySelector("#skladniki_text");
+const ingredientsBtn = document.querySelector("#dodaj_skladniki_button");
+const ingredientsList = document.querySelector(".ingredients-ul");
+const deleteIngrInst = document.querySelectorAll(".fa-trash-alt");
+const instructionsArr = [];
+const ingredientsArr = [];
+
+deleteIngrInst.forEach(el => {
+    el.addEventListener("click", e => {
+        el.remove();
+    });
+});
 
 
-var instrukcjaStruktura = {
-    nazwa: "" , //
-    przyciskEdycja: "",
-    przyciskUsun: ""//
+instructionsBtn.addEventListener("click", e => {
+        e.preventDefault();
+        if (instructions.value !== "") {
+            const newInstr = document.createElement("li");
+            newInstr.innerHTML = `
+            ${instructionsList.childElementCount + 1}.
+            ${instructions.value}
+            <i class="fas fa-edit"></i>
+            <i class="fas fa-trash-alt"></i>`
+            instructionsList.append(newInstr);
+            instructionsArr.push(newInstr);
+            instructions.value = "";
+        } else {
+            alert("Nie można dodać pustej instrukcji");
+        }
+    }
+);
+
+ingredientsBtn.addEventListener("click", e => {
+        e.preventDefault();
+        if (ingredients.value !== "") {
+            const newIngr = document.createElement("li")
+            newIngr.innerHTML = `
+            ${ingredientsList.childElementCount + 1}.
+            ${ingredients.value}
+            <i class="fas fa-edit"></i>
+            <i class="fas fa-trash-alt"></i>`
+            ingredientsList.append(newIngr);
+            ingredientsArr.push(newIngr);
+            ingredients.value = "";
+        } else {
+            alert("Nie można dodać pustego składnika");
+        }
+    }
+);
+
+
+
+
+
+// adding recipe to local storage
+const saveRecBtn = document.querySelector(".recipe-exit");
+const addRecipe = document.querySelector("#dodaj-przepis");
+
+const newRec = {
+    key: "",
+    title: "",
+    description: "",
+    instructions: "",
+    ingredients: ""
 };
 
-var skladnikiStruktura = {
-    nazwa: "" , //
-    przyciskEdycja: "",
-    przyciskUsun: ""//
-};
-
-function renderSingleInstrukcja (instrukcja) {
-// tworzymy nowy element LI i dodajemy go do HTML
-    var newLi = document.createElement( "LI" );
-    newLi.innerText = instrukcja;
-    instructionul.appendChild(newLi);
-}
-dodaj_instrukcje_button.addEventListener("click", function(e) {
+saveRecBtn.addEventListener("click", function (e) {
     e.preventDefault();
+    newRec.title = titleRecipe.value;
+    newRec.description = descriptionRecipe.value;
+    newRec.instructions = instructionsArr;
+    newRec.ingredients = ingredientsArr;
+    newRec.key = "recipes";
+    saveRecToLocalStorage(newRec);
+    console .log( "Zapisano: " , newRec);
+    addRecipe.classList.add("hide");
+    mainDesk.classList.remove("hide");
+    mainCalendar.classList.remove("hide");
 
 });
 
-function saveElementToLocalStorage (newObject) {
-    localStorage.setItem('testObject', JSON.stringify(newObject));
-}
 
-
-//dodaj_instrucje_button.addEventListener("click", dodajInstrukcje(), true);
-function dodajInstrukcje() {
-    let instrukcje_text = document.getElementById("instrukcje_text");
-    // walidacja danych
-    if (instrukcje_text.value.length ===0 ) {
-        alert("Wpisz instrukcje. ");
-    }
-    else
-    {
-        skladnikiStruktura.nazwa = instrukcje.value;
-        skladnikiStruktura.przyciskEdycja = " <button class='far fa-edit'></button>";
-        skladnikiStruktura.przyciskUsun = " <button class='far fa-trash-alt'></button><br>";
-        localStorage.setItem(skladnikiStruktura.nazwa, JSON.stringify(skladnikiStruktura));
-
-        let odczytanyElement = localStorage.getItem(skladnikiStruktura.nazwa);
-        let ele = document.getElementById('instr-add');
-
-        ele.innerHTML = localStorage.getElement(skladnikiStruktura.nazwa, JSON.parse(odczytanyElement));
-        //localStorage.setItem("instrukcja", instrukcje_text.value );
-        //alert (localStorage.getItem("instrukcja"));
-        /*let ele = document.getElementById('instr-add');
-        ele.innerHTML += (localStorage.getItem("instrukcja")) + " <button class='far fa-edit'></button><button class='far fa-trash-alt'></button><br>";
-        */
-
+function saveRecToLocalStorage(newObject) {
+    const dataFromLocalStorage = [];
+    if (titleRecipe.value === "" || descriptionRecipe.value === "" || instructionsArr === [] || ingredientsArr === []) {
+        alert("Uzupełnij dane")
+    } else if (localStorage.getItem("recipes") != null) {
+        let dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
+        dataFromLocalStorage.push(newObject);
+        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+    } else {
+        dataFromLocalStorage.push(newObject);
+        localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
     }
 }
-function dodajSkladniki() {
-    let skladniki_text = document.getElementById("skladniki_text");
-// walidacja danych
-    if (skladniki_text.value.length ===0 ) {
-        alert("Wpisz składniki. ");
-    }
-    else
-    {
-        localStorage.setItem("skladniki", skladniki_text.value );
-        //alert (localStorage.getItem("skladniki"));
-        let ele = document.getElementById('instr2-add');
-        ele.innerHTML += (localStorage.getItem("skladniki")) + " <button class='far fa-edit'></button><button class='far fa-trash-alt'></button><br>";
-    }
-}
+
+
+console .log(localStorage.getItem("recipes"));
+
 //6.2 never ending story
 
 // pola input
@@ -444,3 +461,4 @@ function generowanieplanu () {
     calendar.append(div);
 
 }
+
