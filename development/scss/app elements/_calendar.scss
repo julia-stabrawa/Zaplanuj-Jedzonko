@@ -89,13 +89,15 @@
   display: none;
 }
 // druga część
-
 .calendar {
   margin-left: 30px;
   margin-top: 30px;
   height: 35em;
   width: 75.7em;
   background-color: $background-color;
+  background-image: url("../images/yoda.png");
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px dashed $success-color;
 }
 .calendar-table{
@@ -118,6 +120,7 @@
   height: 20em;
   text-align: left;
   border-bottom: 2px solid $text-color;
+  background-color: $background-color;
 }
 .calendar-tr{
   font-size:20px;
