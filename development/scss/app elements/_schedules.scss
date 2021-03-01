@@ -1,0 +1,84 @@
+.usunmnie{
+  display: none;
+}
+.schedules_list{}
+.schedules_list__container{
+  border: 1px $text-color solid;
+  margin: 50px;
+  background-color: white;
+}
+
+.schedules_list__header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__title{
+  color: $buttons-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.schedules_list__button{
+  font-size: 1.5rem;
+  color: $success-color;
+  background: white;
+  border: none;
+}
+.schedules_list__table{
+  margin: 1.5rem;
+  color: $text-color;
+  overflow-y: scroll;
+}
+.schedules_list__tablenav{
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 3rem;
+  align-content: center;
+  color: $header-color;
+  border-bottom: 1px $text-color solid;
+  border-top: 1px $text-color solid;
+}
+/*.schedules_list__buttons{
+  display: flex;
+}*/
+.schedules_trash__button{
+  color: $bin-color;
+  background: white;
+  border: none;
+}
+.schedules_edit__button{
+  color: $warning-color;
+  background: white;
+  border: none;
+}
+.schedules_list__rows{
+  height: 4rem;
+}
+.schedules_list__number{
+  width: 50px;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__numberos{
+  width: 50px;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__name{
+  width: 150px;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__week{
+  width: 100px;
+  text-align: center;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__text{
+  width: 700px;
+  font-size: 0.7rem;
+  border-bottom: 1px $text-color solid;
+}
+.schedules_list__maintext{
+  width: 700px;
+  border-bottom: 1px $text-color solid;
+}
+

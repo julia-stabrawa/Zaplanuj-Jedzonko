@@ -1,0 +1,153 @@
+.dodaj {
+  display:none;
+}
+
+.desk__main{
+  display: flex;
+}
+.desk__main_button{
+  display: flex;
+}
+.desk__button {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color;
+  border: 1px dashed $success-color;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: $success-color;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.desk__plus {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.desk__delete1 {
+  border: 1px dashed $info-color;
+  color: $info-color;
+  height: 50px;
+  width: 600px;
+  margin-top: 30px;
+
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  background-color: $background-color;
+}
+.desk__delete2 {
+  border: 1px dashed $warning-color;
+  color: $warning-color;
+  height: 50px;
+  width: 600px;
+  margin-left: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  background-color: $background-color;
+}
+.desk__delete3 {
+  border: 1px dashed $success-color;
+  color: $success-color;
+  height: 50px;
+  width: 600px;
+  margin-top: 25px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  background-color: $background-color;
+}
+.desk__check{
+  font-size:35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.desk-check-text{
+  font-size: 18px;
+  font-weight: bold;
+}
+.desk-check-test1{
+  position: relative;
+  top: -13px;
+  left: 260px;
+}
+.desk-check-test2{
+  position: relative;
+  top: -13px;
+  left: 300px;
+}
+.desk-check-test3{
+  position: relative;
+  top: -13px;
+  left: 38px;
+}
+.schowaj {
+  display: none;
+}
+// druga część
+.calendar {
+  margin-left: 30px;
+  margin-top: 30px;
+  height: 35em;
+  width: 75.7em;
+  background-color: $background-color;
+  background-image: url("../images/yoda.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px dashed $success-color;
+}
+.calendar-table{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $buttons-color;
+  font-size: 22px;
+  margin-top: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.calendar-thead {
+  width: 90%;
+  height: 20em;
+  text-align: left;
+  border-bottom: 2px solid $text-color;
+  background-color: $background-color;
+}
+.calendar-tr{
+  font-size:20px;
+  font-weight: bold;
+  color: $header-color;
+  border-top: 2px solid $text-color;
+  border-bottom: 2px solid $text-color;
+}
+.calendar-td{
+  border-bottom: 2px solid $text-color;
+}
+.calendar-td-insite {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  width:136px;
+}
+.calendar-tbody {
+  font-size:15px;
+  font-weight: bold;
+  color: $nav-color;
+}
+
+.calendar-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $buttons-color;
+  font-size: 22px;
+  margin-top: 10px;
+}

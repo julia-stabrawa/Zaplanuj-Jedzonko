@@ -1,0 +1,71 @@
+.header {
+  width: 100vw;
+  padding: 40px;
+  background-color: #5B605F;
+  position: fixed -20px;
+  z-index: 9999;
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+  }
+}
+
+.logo {
+  font-family: Charmonman, sans-serif;
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
+
+    a {
+      font-family: Charmonman, sans-serif;
+      font-size: 3rem;
+      color: $background-color;
+      font-weight: 300;
+      text-decoration: none;
+
+      span {
+        font-weight: 1000;
+        color: $buttons-color;
+      }
+    }
+}
+
+.logo span {
+  font-weight: 1000;
+  color: #FF6600;
+}
+
+.nav__element {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__el {
+  font-weight: 400;
+  color: white;
+  font-size: 1.25rem;
+  padding: 70px;
+  letter-spacing: 0.04rem;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+
+.nav__el:hover {
+  color: $buttons-color;
+  transition: color .5s ease-in-out;
+}
+
+.nav__el-active {
+  color: darkorange;
+}

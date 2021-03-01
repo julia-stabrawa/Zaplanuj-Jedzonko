@@ -1,0 +1,87 @@
+.recipes_list{}
+.recipes_list__container{
+  border: 1px $text-color solid;
+  margin: 50px;
+  background-color: white;
+}
+.recipes_list__header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem;
+  border-bottom: 1px $text-color solid;
+}
+.recipes_list__title{
+  color: $buttons-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.recipes_list__button{
+  font-size: 1.5rem;
+  color: $success-color;
+  background: white;
+  border: none;
+}
+.recipes_list__table{
+  margin: 1.5rem;
+  color: $text-color;
+  overflow-y: scroll;
+  tr {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px $text-color solid;
+    padding-bottom: 1.5rem;
+    td {
+      border: none;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}
+.recipes_list__tablenav{
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 3rem;
+  width: 100%;
+  color: $header-color;
+  border-bottom: 1px $text-color solid;
+  border-top: 1px $text-color solid;
+  margin-bottom: 1.5rem;
+}
+
+.recipes_trash__button{
+  color: $bin-color;
+  background: white;
+  border: none;
+
+}
+
+.recipes_edit__button{
+  color: $warning-color;
+  background: white;
+  border: none;
+
+}
+
+.recipes_list__rows{
+
+  height: 4rem;
+}
+
+.recipes_list__number{
+  width: 50px;
+  font-size: 1rem;
+  border-bottom: 1px $text-color solid;
+}
+.recipes_list__name{
+  width: 150px;
+  font-size: 1rem;
+  border-bottom: 1px $text-color solid;
+}
+.recipes_list__text{
+  width: 700px;
+  font-size: 0.9rem;
+  border-bottom: 1px $text-color solid;
+}

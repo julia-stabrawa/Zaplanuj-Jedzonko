@@ -1,0 +1,42 @@
+.newsletter{
+  background: $nav-color;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+  padding: 10px;
+}
+
+.newsletter__title{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  color: $background-color;
+}
+
+.newsletter__form{}
+
+.newsletter__input{
+  width: 300px;
+}
+
+.newsletter__btn{
+  background-color: $buttons-color;
+  border: 1px solid $nav-color;
+  color: $background-color;
+  width: 200px;
+  height: 42px;
+  font-size: 1.2rem;
+  margin-left: -5px;
+}
+input{
+  margin: 0px auto;
+  padding: 10px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="header__app-cnt">
+        <h1 class="logo app__logo">
+            Zaplanuj <span>Jedzonko</span>
+        </h1>
+        <div class="header__user">
+            <p class="user__name">Imię</p>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </div>
+</header>
+<section class="app__body">
+    <div class="body__app-cnt">
+        <div class="sidebar">
+            <ul>
+                <li id="desk__app">
+                    <a href="./app.html">Pulpit</a>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li id="recipes_app">
+                    <a href="./recipes.html">Przepisy</a>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li id="plans_app">
+                    <a href="./schedules.html">Plany</a>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="app__desktop">
+
+            <section class="recipes_list">
+                <div class="recipes_list__container">
+                    <div class="recipes_list__header">
+                        <h1 class="recipes_list__title">LISTA PRZEPISÓW</h1>
+                        <button class="recipes_list__button"><i class="fas fa-plus-square"></i></button>
+                    </div>
+                    <div class="recipes_list__table">
+                        <table>
+                            <tbody>
+                            <tr class="recipes_list__tablenav">
+                                <td>ID</td>
+                                <td>NAZWA</td>
+                                <td>OPIS</td>
+                                <td>AKCJE</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="edytuj-przepis hide" id="edytuj-przepis">
+                <div class="recipe">
+                    <div class="recipe-all">
+                        <div class="recipe-top">
+                            <div class="recipe-title">EDYTUJ PRZEPIS</div>
+                            <button class="recipe-exit">Zapisz i zamknij</button>
+                        </div>
+                        <hr>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Nazwa przepisu</h1>
+                            <input class="recipe-input-one" type="text" id="nazwa_text" name="nazwa"
+                                   placeholder="Wpisz nazwę dania">
+                        </div>
+                        <div class="recipe-minititle">
+                            <h1 class="recipe-h1">Opis przepisu</h1>
+                            <input class="recipe-input-two" type="text" name="nazwa" placeholder="Wpisz opis dania">
+                        </div>
+                        <div id="recipe-minititle2-all">
+                            <div class="recipe-minititle2">
+                                <p class="recipe-p1">INSTRUKCJE</p>
+                                <hr>
+                                <p><input class="recipe-input-three" type="text" id="instrukcje_text" placeholder="Dodaj instrukcję">
+                                    <button class="button" id="dodaj_instrukcje_button">+</button>
+                                <div id="instr-add" class="scroll">
+                                    <ul class = "instruction-ul">
+
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <div class="recipe-minititle3 ">
+                                <p class="recipe-p1">SKŁADNIKI</p>
+                                <hr>
+                                <p><input class="recipe-input-for" type="text" id="skladniki_text" name="nazwa" placeholder="Dodaj składniki">
+                                    <button class="button" id="dodaj_skladniki_button">+</button>
+                                <div id="instr2-add" class="scroll">
+                                    <ul class="ingredients-ul">
+
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./js/recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.features_container{
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+}
+
+.features{
+  background: $background-color;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.features_single{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.features_title{
+  color: $header-color;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px;
+}
+
+.features_txt{
+  margin: 30px;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  color: $header-color;
+  line-height: 150%;
+  font-size: 1.3rem;
+}
+
+h3{
+  font-size: 4rem;
+  color: $text-color;
+  margin-top: 30px;
+}
